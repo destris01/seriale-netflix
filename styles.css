@@ -1,3 +1,46 @@
-body {
-    background-color: green;
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #161616;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;  
+}
+
+.header .logo-container {
+    display: flex;
+    
+}
+
+.header .logo-container .logo-title {
+    color: #fff;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    padding: 16px;
+    color: #fff;
+    
+}
+
