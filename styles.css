@@ -5,22 +5,31 @@
 }
 
 body {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    background-color: #161616;
     font-family: 'Ubuntu', sans-serif;
+    background-image: url(./img/background.jpg);
+    background-repeat: no-repeat;
+ 
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 40px;
-    margin-right: 40px;  
+    background-color: #161616;
+    opacity: .96;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 
 .header .logo-container {
     display: flex;
+    margin-left: 40px;
     
 }
 
@@ -30,8 +39,18 @@ body {
     font-size: 1.5rem;
 }
 
+.header .img-logo {
+    height: 10vh;
+    padding: 5px;
+}
+
+.index-link {
+    text-decoration: none;
+    display: flex;
+}
 
 
+/*
 .nav-list {
     list-style: none;
     display: flex;
@@ -43,4 +62,310 @@ body {
     color: #fff;
     
 }
+
+*/
+ul {
+    margin: 0;
+    padding: 0;
+    margin-right: 100px;
+    list-style-type: none;
+    display: flex;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 30px;
+    display: block;
+}
+
+ul li a:hover {
+    color: lightgray;
+}
+
+ul li .category:hover::after {
+    content: '';
+    max-width: inherit;
+    height: 3px;
+    margin-top: 5px;
+    display: block;
+    background-color: red;
+}
+
+
+ul ul {
+    position: absolute;
+    min-width: 200px;
+    background: lightgrey;
+    display: none;
+}
+
+ul ul li {
+    display: block;
+    background: #161616;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+ul li i {
+    color: lightgray;
+    float: right;
+    padding-left: 10px;
+}
+
+
+
+.section-hero{
+    height: 100vh;
+    margin-top: 200px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.intro {
+    height: 100vh;
+    background-color: #161616;
+   
+}
+
+
+
+.scroll-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(182, 31, 31);
+    width: 200px;
+    padding: 20px;
+}
+
+.scroll-btn a {
+    text-decoration: none;
+    font-size: 26px;
+    display: block;
+    text-align: center;
+    color: #fff;
+
+}
+
+.introduction {
+    padding: 10%;
+    display: flex;
+}
+
+
+
+.intro-img {
+    height: 40vh;
+    margin-top: 30px;
+    margin-left: 55px;
+}
+
+
+
+.introduction p {
+    color: white;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    max-width: 600px;
+}
+
+.main-text {
+    padding: 10%;
+}
+
+.main-text p {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.history-header {
+    color: rgb(182, 31, 31);
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+
+
+.history {
+    height: 100vh;
+    background-color: #161616;
+   
+}
+
+.footer {
+    background-color: #141414;
+    height: 30vh;
+    
+    
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    margin-top: 70px;
+    font-size: 17px;
+    color: #808080;
+}
+
+.netflix-links {
+    margin-top: 20px;
+}
+
+.netflix-web {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(182, 31, 31);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.netflix-web:hover {
+    color: rgb(207, 8, 8)
+   
+}
+
+
+.social-links i {
+    color: #808080;
+    font-size: 35px;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.social-links i:hover {
+    color: #a7a0a0;
+}
+
+
+
+.scroll-down {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-80%, -50%);
+    width: 85px;
+    height: 85px;
+    border-radius: 100%;
+    background-color: #161616;
+    cursor: pointer;
+    animation: scroll-smoth 1.9s infinite linear;
+    
+}
+
+.container-info {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    width: 80%;
+    color: #fff;
+}
+
+.background-page {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 70vh;
+    
+}
+
+.about {
+    height: 1300px;
+}
+
+
+.title {
+    font-size: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.date {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.informations {
+    max-width: 750px;
+    font-size: 21px;
+    margin-top: 20px;
+}
+
+.more-info {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 700;
+    display: block;
+    width: 150px;
+    margin-top: 50px;
+    background-color: rgb(182, 31, 31);
+    padding: 20px;
+    transition: .2s all ease-in-out;
+}
+
+.more-info:hover {
+    background-color: rgb(195, 41, 41);
+
+}
+
+
+.category {
+    margin-top: 20px;
+    color: #c3c2c2;
+    font-size: 18px;
+}
+@keyframes scroll-smoth {
+    0%,
+    20%,
+    40%,
+	50% {
+        transform: translateY(10px);
+		
+	}
+	70% {
+        transform: translateY(22px);
+       
+		
+    }
+    100% {
+        transform: translateY(36px);
+        
+        
+    }
+    
+}
+
+.scroll-down i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: red;
+}
+
+
+
+
+
 
